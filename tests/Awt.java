@@ -1,9 +1,10 @@
+package tests;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class sample extends JApplet implements ActionListener {
+public class Awt extends JApplet implements ActionListener {
    JPanel p;
    JLabel a, b;
    JTextField t1, t2;

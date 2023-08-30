@@ -1,3 +1,5 @@
+package tests.applet;
+
 import java.applet.*;
 import java.awt.*;
 

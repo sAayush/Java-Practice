@@ -1,3 +1,5 @@
+package tests.thread;
+
 class test3 {
     public static void main(String[] args) {
         MyThread t1 = new MyThread("Thread 1");
