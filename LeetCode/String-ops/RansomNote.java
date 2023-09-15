@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+// Given a ransom note and a magazine, return true if the ransom note can be constructed from the magazines; otherwise, return false.
+// Each letter in the magazine string can only be used once in your ransom note.
+
 public class RansomNote {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
