@@ -1,3 +1,4 @@
+package LeetCode.linkedlist;
 class ListNode {
     int val;
     ListNode next;
