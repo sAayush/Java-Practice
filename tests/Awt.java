@@ -1,5 +1,3 @@
-package tests;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;

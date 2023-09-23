@@ -1,5 +1,3 @@
-package Programs;
-
 import java.util.Scanner;
 
 public class Disarium {
