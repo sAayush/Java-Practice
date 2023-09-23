@@ -1,5 +1,3 @@
-package intString;
-
 import java.util.Scanner;
 
 public class RomanToInt {

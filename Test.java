@@ -1,90 +1,40 @@
-import java.util.Scanner;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-class AddTwoNumbers {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode();
-        ListNode current = dummyHead;
-        int carry = 0;
-
-        while (l1 != null || l2 != null) {
-            int x = (l1 != null) ? l1.val : 0;
-            int y = (l2 != null) ? l2.val : 0;
-
-            int total = x + y + carry;
-            carry = total / 10;
-
-            current.next = new ListNode(total % 10);
-            current = current.next;
-            if (l1 != null) {
-                l1 = l1.next;
-            }
-            if (l2 != null) {
-                l2 = l2.next;
-            }
-        }
-
-        if (carry > 0) {
-            current.next = new ListNode(carry);
-        }
-
-        return dummyHead.next;
-    }
-}
+import java.util.*;
 
 public class Test {
+    public static List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList<>();
+        generateParenthesisHelper(result, "", 0, 0, n);
+        return result;
+    }
 
-    public static ListNode createLinkedListFromInput(String input) {
-        String[] values = input.split(" ");
-        ListNode dummyHead = new ListNode();
-        ListNode current = dummyHead;
-
-        for (String value : values) {
-            current.next = new ListNode(Integer.parseInt(value));
-            current = current.next;
+    private static void generateParenthesisHelper(List<String> result, String current, int open, int close, int n) {
+        if (current.length() == 2 * n) {
+            result.add(current);
+            return;
         }
 
-        return dummyHead.next;
+        if (open < n) {
+            generateParenthesisHelper(result, current + "(", open + 1, close, n);
+        }
+
+        if (close < open) {
+            generateParenthesisHelper(result, current + ")", open, close + 1, n);
+        }
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // System.out.print("Enter the first number represented by a linked list (e.g.,
-        // 2 4 3): ");
-        ListNode l1 = createLinkedListFromInput("2 4 3");
-
-        // System.out.print("Enter the second number represented by a linked list (e.g.,
-        // 5 6 4): ");
-        ListNode l2 = createLinkedListFromInput("5 6 4");
-
-        AddTwoNumbers solution = new AddTwoNumbers();
-        ListNode result = solution.addTwoNumbers(l1, l2);
-
-        // Print the result
-        System.out.print("Result: ");
-        while (result != null) {
-            System.out.print(result.val + " -> ");
-            result = result.next;
+        int n = 7;
+        List<String> result7 = generateParenthesis(n);
+        System.out.println("n = " + n);
+        for (String s : result7) {
+            System.out.println(s);
         }
 
-        scanner.close();
+        n = 8;
+        List<String> result8 = generateParenthesis(n);
+        System.out.println("n = " + n);
+        for (String s : result8) {
+            System.out.println(s);
+        }
     }
-
 }
