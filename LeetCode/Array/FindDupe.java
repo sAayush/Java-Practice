@@ -1,4 +1,3 @@
-package LeetCode.Array;
 import java.util.Arrays;
 
 public class FindDupe {

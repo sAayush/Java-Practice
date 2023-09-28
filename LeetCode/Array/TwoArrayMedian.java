@@ -1,4 +1,3 @@
-package LeetCode.Array;
 public class TwoArrayMedian {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int size = nums1.length + nums2.length;

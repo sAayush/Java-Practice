@@ -1,4 +1,3 @@
-package LeetCode.Array;
 public class RemoveDupes {
     public int removeDuplicates(int[] nums) {
         int i = 0;
