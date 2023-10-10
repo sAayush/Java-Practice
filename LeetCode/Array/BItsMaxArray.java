@@ -1,4 +1,3 @@
-package Array;
 public class BItsMaxArray {
     public int findMaxConsecutiveOnes(int[] nums) {
         int max1 = 0;

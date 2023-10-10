@@ -1,4 +1,3 @@
-package LeetCode.Array;
 public class MinusX{
     public int minOperations(int[] nums, int x) {
         int sum = 0;
