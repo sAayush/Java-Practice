@@ -27,28 +27,27 @@ public class IntBreak {
         // if remainder = 0 then its basically num * 4 / 4 beacuse 4 - 4 = 0
         // if remainder = 1 then its basically num * 4 / 3 beacuse 4 - 3 = 1
         // if remainder = 2 then its basically num * 4 / 2 beacuse 4 - 2 = 2
-        return n <=3 ? n - 1 : (int)Math.pow(3, n / 3) * 4 / (4 - n % 3);
+        return n <= 3 ? n - 1 : (int) Math.pow(3, n / 3) * 4 / (4 - n % 3);
     }
 
     // public int integerBreak(int n) {
-    //     if (n == 2) return 1;
-    //     if (n == 3) return 2;
+    // if (n == 2) return 1;
+    // if (n == 3) return 2;
 
-    //     int count_of_3s = n / 3;
-    //     int remainder = n % 3;
+    // int count_of_3s = n / 3;
+    // int remainder = n % 3;
 
-    //     if (remainder == 0) {
-    //         return (int) Math.pow(3, count_of_3s);
-    //     } else if (remainder == 1) {
-    //         return (int) Math.pow(3, count_of_3s - 1) * 4;
-    //     } else {
-    //         return (int) Math.pow(3, count_of_3s) * 2;
-    //     }
+    // if (remainder == 0) {
+    // return (int) Math.pow(3, count_of_3s);
+    // } else if (remainder == 1) {
+    // return (int) Math.pow(3, count_of_3s - 1) * 4;
+    // } else {
+    // return (int) Math.pow(3, count_of_3s) * 2;
+    // }
     // }
 
-
     public static void main(String[] args) {
-        intBreak test = new intBreak();
+        IntBreak test = new IntBreak();
         int n = 7;
         System.out.println(test.integerBreak(n));
         n = 8;
