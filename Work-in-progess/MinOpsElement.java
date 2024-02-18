@@ -7,9 +7,6 @@ public class MinOpsElement {
         int n = numList.size();
 
         for (int i = n - 1; i > 0; i++) {
-            if (numList.get(i) > k) {
-                continue;
-            }
         }
         return count;
     }
